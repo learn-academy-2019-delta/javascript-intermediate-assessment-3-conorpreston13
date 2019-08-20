@@ -25,9 +25,10 @@ var fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
 let oddChecker = (arr) => {
   let newArr = []
   for (let i = 0; i < arr.length; i++){
-    if(arr[i] % 2 !== 0){
+    if(arr[i] % 2 !== 0 && typeof arr[i] === "number"){
       newArr.push(arr[i])
     }
+    
   }
   return newArr
 }
@@ -121,7 +122,18 @@ let findMiddle = (letters) => {
 // 8. Write a program to get the area of a sphere using object classes. Create three spheres with different radi as test cases. Area of a sphere =  4πr^2 (four pi r squared)
 
 // i am havin trouble starting this program
+class Sphere{
+  constructor(radius){
+  this.radius = radius
+  }
+  getArea(){
+    let pi = Math.PI
+    return 4 * pi this.radius **2
+  }
+}
+var mySphere = new Sphere(6)
 
+console.log(mySphere.getArea())
 
 // 9. Use object destructuring to return the nested values of specs. Expected output: 4, "manual"
 // Don't overthink this one, it's just destrcturing practice.
